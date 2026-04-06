@@ -1,0 +1,12 @@
+{
+  "name": "metals-dashboard",
+  "version": "1.0.0",
+  "description": "Metal prices dashboard vs gold",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
