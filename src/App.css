@@ -1,0 +1,226 @@
+/* ─── Layout shell ────────────────────────────────────────────────────────── */
+
+.app-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ─── Hero header ─────────────────────────────────────────────────────────── */
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FFD700;
+  margin-bottom: 0.25rem;
+}
+
+.hero-panel h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.hero-copy {
+  color: #888;
+  font-size: 0.875rem;
+  max-width: 42rem;
+  margin-top: 0.25rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.refresh-button {
+  background: #1a1d2e;
+  color: #e0e0e0;
+  border: 1px solid #2a2d3e;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.refresh-button:hover {
+  background: #252840;
+}
+
+/* ─── Error banner ────────────────────────────────────────────────────────── */
+
+.error-banner {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #fca5a5;
+  font-size: 0.875rem;
+}
+
+/* ─── Controls / tabs ─────────────────────────────────────────────────────── */
+
+.controls-panel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab {
+  background: transparent;
+  color: #888;
+  border: 1px solid #2a2d3e;
+  border-radius: 6px;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  background: #1a1d2e;
+  color: #ccc;
+}
+
+.tab.active {
+  background: #FFD700;
+  color: #0f1117;
+  border-color: #FFD700;
+  font-weight: 600;
+}
+
+.helper-text {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* ─── Stat cards grid ─────────────────────────────────────────────────────── */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.stat-card {
+  background: #141722;
+  border: 1px solid #1e2130;
+  border-left: 3px solid #2a2d3e;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stat-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stat-ratio {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.stat-change {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stat-change.positive {
+  color: #4ade80;
+}
+
+.stat-change.negative {
+  color: #f87171;
+}
+
+/* ─── Panels (chart containers) ───────────────────────────────────────────── */
+
+.panel {
+  background: #141722;
+  border: 1px solid #1e2130;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 1.25rem 1.5rem 0.75rem;
+}
+
+.panel-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.panel-header p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
+.chart-wrap {
+  padding: 0 1rem 1.25rem;
+}
+
+/* ─── Empty / loading states ──────────────────────────────────────────────── */
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #555;
+  font-size: 0.875rem;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 1rem 0.75rem 3rem;
+  }
+
+  .hero-panel {
+    flex-direction: column;
+  }
+
+  .hero-meta {
+    align-items: flex-start;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
